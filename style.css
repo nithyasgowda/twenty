@@ -614,7 +614,8 @@ footer #copywrite span a {
 @media screen and (max-width: 767px) {
   header {
     padding: 0 15px;
-    position: fixed;
+    position: sticky;
+    top:0px;
   }
   header #logo,header nav {
     display: none;
@@ -675,7 +676,9 @@ footer #copywrite span a {
     height: fit-content;
     margin: 15px 0;
     cursor: pointer;
+    position: absolute;
   }
+
   #burger:hover{
     background-color: #131313a8;
   }
