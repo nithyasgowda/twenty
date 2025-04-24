@@ -24,6 +24,7 @@
 let check = false;
 
 document.getElementById("burger").addEventListener('click', function (e) {
+    e.preventDefault();
     const nav = document.querySelector('#nav_panel');
     const wrapper = document.querySelector('#wrapper');
 

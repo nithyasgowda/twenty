@@ -612,23 +612,30 @@ footer #copywrite span a {
 }
 
 @media screen and (max-width: 767px) {
+  html{
+    overflow-x: hidden;
+  }
   header {
     padding: 0 15px;
     position: sticky;
-    top:0px;
-  }
+    top:0px; 
+  } 
   header #logo,header nav {
     display: none;
   }
   #nav_panel{
+    height: 100%;
     display: block;
     position: fixed;
+    will-change: transform; 
     top:0;
-    height: 100vh;
-    width:280px;
+    left:0; 
+    z-index: 15;
+    width:280px; 
     background-color: #1c2021;
-    text-transform: uppercase;
+    text-transform: uppercase; 
     padding: 15px ;
+    overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
   }
@@ -662,11 +669,11 @@ footer #copywrite span a {
     padding-left: 10px;
   }
   body #wrapper{
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
   }
   body #wrapper.nav-open {
     transform: translateX(280px);
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
   }
   #burger {
     background-color: #16161659;
