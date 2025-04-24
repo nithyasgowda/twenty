@@ -36,6 +36,7 @@ ul {
 
 /* ----------------- PROJECT CSS ----------------- */
 
+
 /* HEADER BLOCK --------------------------------------------- */
 header {
   padding: 20px 40px;
@@ -141,8 +142,15 @@ nav #mainmenu #menu #subMainmenu #submenu {
 nav #mainmenu #menu #subMainmenu:hover #submenu {
   display: block;
 }
-#nav_panel{
+
+/* BURGER BLOCK --------------------------------------------- */
+#burger {
     display: none;
+}
+
+/* NAV PANEL BLOCK --------------------------------------------- */
+#nav_panel {
+  display: none;
 }
 
 /* BANNER BLOCK --------------------------------------------- */
@@ -198,14 +206,8 @@ nav #mainmenu #menu #subMainmenu:hover #submenu {
   font-weight: 600;
   transition: 0.5s;
 }
-#bannerContent .tellMe:hover{
-    background-color: #5b59596c;
-}
-#burger {
-  background-color: #c9cdd049;
-  padding: 5px 10px;
-  border-radius: 3px;
-  display: none;
+#bannerContent .tellMe:hover {
+  background-color: #5b59596c;
 }
 
 /* MAIN CONTENT BLOCK --------------------------------------------- */
@@ -299,8 +301,8 @@ nav #mainmenu #menu #subMainmenu:hover #submenu {
   width: fit-content;
   transition: 0.5s;
 }
-#mainIconsSection #content a:hover{
-    background-color: #c0faf259;
+#mainIconsSection #content a:hover {
+  background-color: #c0faf259;
 }
 #mainIconsSection #iconsBlock {
   width: 30%;
@@ -426,9 +428,9 @@ nav #mainmenu #menu #subMainmenu:hover #submenu {
   letter-spacing: 1px;
   transition: 0.5s;
 }
-#coolStuffBlock a:hover{
-    background-color: rgb(162, 162, 162);
-    color:#fff;
+#coolStuffBlock a:hover {
+  background-color: rgb(162, 162, 162);
+  color: #fff;
 }
 
 /* READY BLOCK --------------------------------------------- */
@@ -478,13 +480,13 @@ nav #mainmenu #menu #subMainmenu:hover #submenu {
   transition: 0.5s;
 }
 #buttons #money:hover {
-    background-color: #95d2ca;
+  background-color: #95d2ca;
 }
 #buttons #lol {
   border: 1px solid;
 }
-#buttons #lol:hover{
-    background-color: #5b59596c;
+#buttons #lol:hover {
+  background-color: #5b59596c;
 }
 
 /* FOOTER BLOCK --------------------------------------------- */
@@ -512,8 +514,12 @@ footer #socialIcons a {
 footer #socialIcons .twitter {
   background-color: var(--twitter);
 }
-footer #socialIcons .twitter:hover,footer #socialIcons .facebook:hover,footer #socialIcons .googlePlus:hover,footer #socialIcons .github:hover,footer #socialIcons .dribbble:hover{
-    opacity: 0.85;
+footer #socialIcons .twitter:hover,
+footer #socialIcons .facebook:hover,
+footer #socialIcons .googlePlus:hover,
+footer #socialIcons .github:hover,
+footer #socialIcons .dribbble:hover {
+  opacity: 0.85;
 }
 footer #socialIcons .facebook {
   background-color: var(--facebook);
@@ -544,7 +550,6 @@ footer #copywrite span a {
   text-decoration: underline dotted 0.5px;
   text-underline-offset: 0.2rem;
 }
-
 
 /* MEDIA QUERIES ---------------------------------------------*/
 @media screen and (max-width: 1450px) {
@@ -612,29 +617,22 @@ footer #copywrite span a {
 }
 
 @media screen and (max-width: 767px) {
-  html{
+  html {
     overflow-x: hidden;
   }
   header {
-    padding: 0 15px;
-    position: sticky;
-    top:0px; 
-  } 
-  header #logo,header nav {
     display: none;
   }
-  #nav_panel{
-    height: 100%;
+  #nav_panel {
+    height: 100vh;
     display: block;
     position: fixed;
-    will-change: transform; 
-    top:0;
-    left:0; 
-    z-index: 15;
-    width:280px; 
+    top: 0;
+    left: 0;
+    width: 280px;
     background-color: #1c2021;
-    text-transform: uppercase; 
-    padding: 15px ;
+    text-transform: uppercase;
+    padding: 15px;
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
@@ -645,7 +643,7 @@ footer #copywrite span a {
   #nav_panel.slide-out {
     transform: translateX(-100%);
   }
-  #nav_panel a{
+  #nav_panel a {
     color: #fff;
     font-size: 15px;
     display: inline-block;
@@ -653,22 +651,22 @@ footer #copywrite span a {
     border-bottom: 1px solid #46454579;
     padding: 10px 0 10px 5px;
   }
-  #nav_panel a:hover{
-    background-color:#474949b5;
+  #nav_panel a:hover {
+    background-color: #474949b5;
   }
-  #nav_panel>ul>li>a{
+  #nav_panel > ul > li > a {
     font-weight: 700;
     letter-spacing: 1px;
   }
-  #panelMenu li a{
+  #panelMenu li a {
     color: #d4d0d0;
     font-size: 14px;
     letter-spacing: 1px;
   }
-  #panelMenu li{
+  #panelMenu li {
     padding-left: 10px;
   }
-  body #wrapper{
+  body #wrapper {
     transition: all 0.4s ease;
   }
   body #wrapper.nav-open {
@@ -679,14 +677,17 @@ footer #copywrite span a {
     background-color: #16161659;
     padding: 5px 15px;
     border-radius: 3px;
+    color: #fff;
     display: block;
     height: fit-content;
-    margin: 15px 0;
+    margin: 15px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    transition: all 0.4s ease;
   }
-
-  #burger:hover{
+  #burger:hover {
     background-color: #131313a8;
   }
   #bannerContent {
